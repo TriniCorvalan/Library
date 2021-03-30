@@ -1,0 +1,22 @@
+<h3 class="mb-3">
+  <strong>Email:</strong>
+  <%= @user.email %>
+</h3>
+
+<h3 class="mb-3">
+  <strong>Booked books:</strong>
+</h3>
+
+<ul>
+  <% @books.each do |book| %>
+  <li>
+    <p>
+    <strong>Title: </strong><%= book.title %>
+    <span><strong>Status: </strong><%= book.status %><span>
+    </p>
+  </li>
+  <% end %>
+</ul>
+
+<%= link_to 'Back', root_path, class: "btn btn-dark" %>
+
